@@ -49,7 +49,7 @@ First we need to configure the server. Rename `.env.example` to `.env`.
 
 Then configure the `.env` file using your Client Id, Client Secret and your Plusauth tenant name.
 
-**_Note:_** `composer` must be installed on your system to run the project.
+**_Note:_** `composer` must be installed on your system to install project dependencies.
 
 You can run the project with following options:
 
