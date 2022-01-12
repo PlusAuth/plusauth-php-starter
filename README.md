@@ -49,13 +49,13 @@ First we need to configure the server. Rename `.env.example` to `.env`.
 
 Then configure the `.env` file using your Client Id, Client Secret and your Plusauth tenant name.
 
-_*Note:*_ `composer` must be installed on your system to run the project.
+**_Note:_** `composer` must be installed on your system to run the project.
 
 You can run the project with following options:
 
 ### With PHP command
 
-_*Note:*_ You must have curl and xml extensions for php installed and enabled.
+**_Note:_** You must have curl and xml extensions for php installed and enabled.
 
 Install dependencies:
 
