@@ -57,6 +57,10 @@ You can run the project with following options:
 
 **_Note:_** You must have curl and xml extensions for php installed and enabled.
 
+Install following packages if not installed on your system
+
+    sudo apt-get install composer zip php-curl php-xml
+
 Install dependencies:
 
     composer install
