@@ -22,7 +22,7 @@ class Auth {
             $_ENV['CLIENT_SECRET']);
 
         $oidc->setResponseTypes('id_token token');
-        $oidc->addScope('profile email');
+        $oidc->addScope('openid profile email');
         $oidc->setAllowImplicitFlow(true);
         $oidc->addAuthParam(array('response_mode' => 'form_post'));
         $oidc->setRedirectURL('http://localhost:3000/login.php');
