@@ -33,7 +33,7 @@ This is a very simple PHP project demonstrating basic authentication flows such 
 
 Before running the project, you must first follow these steps:
 
-1. Create a Plusauth account and a tenant at https://dashboard.plusauth.com
+1. Create a PlusAuth account and a tenant at https://dashboard.plusauth.com
 2. Navigate to `Clients` tab and create a client of type `Regular Web Application`.
 3. Go to details page of the client that you've just created and set the following fields as:
 
@@ -47,7 +47,7 @@ Finally write down your Client Id and Client Secret for server configuration
 
 First we need to configure the server. Rename `.env.example` to `.env`.
 
-Then configure the `.env` file using your Client Id, Client Secret and your Plusauth tenant name.
+Then configure the `.env` file using your Client Id, Client Secret and your PlusAuth tenant name.
 
 **_Note:_** `composer` must be installed on your system to install project dependencies.
 
