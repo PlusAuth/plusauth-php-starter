@@ -10,7 +10,7 @@
     Simple PHP project demonstrates basic authentication flows with PlusAuth
     <br />
     <br />
-    <a href="" target="_blank"><strong>Explore the PlusAuth PHP docs »</strong></a>
+    <a href="https://docs.plusauth.com/quickStart/web/php" target="_blank"><strong>Explore the PlusAuth PHP docs »</strong></a>
 </p>
 
 <details>
