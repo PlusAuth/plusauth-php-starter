@@ -22,42 +22,40 @@ class Auth {
             $_ENV['CLIENT_SECRET']);
 
         $oidc->setResponseTypes('id_token token');
-        $oidc->addScope('openid profile email');
+        $oidc->addScope(array('openid profile'));
         $oidc->setAllowImplicitFlow(true);
         $oidc->addAuthParam(array('response_mode' => 'form_post'));
         $oidc->setRedirectURL('http://localhost:3000/login.php');
+        
+        // For development mode only
+        $oidc->setVerifyHost(false);
+        $oidc->setVerifyPeer(false);
 
-        $this->oidc = $oidc;
+        $this->oidc = $oidc; // Crate oidc object at page load
         $this->postLogoutRedirectUri = "http://localhost:3000/";
     }
 
     public function login() {
         if ($this->isLoggedIn() == false) {
             $this->oidc->authenticate();
-            $this->setAccessToken($this->oidc->getAccessToken());
             $this->setIdToken($this->oidc->getIdToken());
             $this->setUser($this->oidc->requestUserInfo());
         }
-    }
+        // User information is in the session if user logged in
+      }
 
     public function logout() {
-        // Clear session, user will still be logged in on OP side
+        // Clear session, user will still be logged in on PlusAuth
         $idToken = $this->getIdToken();
-        unset($_SESSION['accessToken']);
         unset($_SESSION['idToken']);
         unset($_SESSION['user']);
 
-        // RP initiated logout, user will be logged out op OP side too
-        // Comment next line to see the difference
+        // RP initiated logout, user will be logged out from PlusAuth too
         return $this->oidc->signOut($idToken, $this->postLogoutRedirectUri);
     }
 
     public function getIdToken() {
         return $_SESSION['idToken'];
-    }
-
-    public function getAccessToken() {
-        return $_SESSION['accessToken'];
     }
 
     public function getUser() {
@@ -73,11 +71,6 @@ class Auth {
         $_SESSION['idToken'] = $idToken;
     }
     
-    private function setAccessToken($accessToken)
-    {
-        $_SESSION['accessToken'] = $accessToken;
-    }
-
     private function setUser($user) {
         $_SESSION['user'] = $user;
     }

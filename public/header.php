@@ -33,7 +33,7 @@ $user = $auth->getUser();
         <?php if($auth->isLoggedIn()) { ?>
         <li class="nav-item navbar-nav">
           <a class="nav-link" href="/profile.php">
-            Logged in as: <?php echo $user->email ?>
+            Logged in as: <?php echo $user->username ?>
           </a>
         </li>
         <a class="nav-link" href="/logout.php">
