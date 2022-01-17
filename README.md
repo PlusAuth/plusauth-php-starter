@@ -27,35 +27,35 @@
 
 ## About The Project
 
-This is a very simple PHP project demonstrating basic authentication flows such as register, login and logout. To keep things simple we used `Jumbojett\OpenIDConnectClient` for authentication.
+It is a simple `PHP` project demonstrating basic authentication flows such as register, login, and logout. `Jumbojett\OpenIDConnectClient` is used for authentication to keep things simple.
 
 ## Prerequisites
 
 Before running the project, you must first follow these steps:
 
 1. Create a PlusAuth account and a tenant at https://dashboard.plusauth.com
-2. Navigate to `Clients` tab and create a client of type `Regular Web Application`.
-3. Go to details page of the client that you've just created and set the following fields as:
+2. Navigate to the `Clients` tab and create a client of type `Regular Web Application`
+3. Go to the details page of the client that you've just created and set the following fields as:
 
    - Redirect Uris: http://localhost:3000/login.php
 
-   - Post Logout Redirect Uris: http://localhost:3000/
+   - Post-Logout Redirect Uris: http://localhost:3000/
 
-Finally write down your Client Id and Client Secret for server configuration
+Finally, write down your Client Id and Client Secret for server configuration
 
 ## Getting Started
 
-First we need to configure the server. Rename `.env.example` to `.env`.
+First, we need to configure the server. Rename `.env.example` to `.env`.
 
-Then configure the `.env` file using your Client Id, Client Secret and your PlusAuth tenant name.
+Then configure the `.env` file using your Client Id, Client Secret, and your PlusAuth tenant name.
 
 **_Note:_** `composer` must be installed on your system to install project dependencies.
 
-You can run the project with following options:
+You can run the project with the following options:
 
 ### With PHP command
 
-**_Note:_** You must have curl and xml extensions for php installed and enabled.
+**_Note:_** You must have `curl` and `XML` extensions for PHP installed and enabled.
 
 Install following packages if not installed on your system
 
@@ -75,7 +75,7 @@ Install dependencies:
 
     composer install
 
-Finally start the server:
+Finally, start the server:
 
     docker-compose up
 
@@ -83,11 +83,11 @@ The example is hosted at http://localhost:3000/
 
 ## License
 
-This project is licensed under the MIT license. See the [LICENSE](LICENSE) file for more info.
+The project is licensed under the MIT license. See the [LICENSE](LICENSE) file for more info.
 
 ## What is PlusAuth
 
-PlusAuth helps to individuals, team and organizations for implementing authorization and authentication system in a secure, flexible and easy way.
+PlusAuth helps individuals, teams, and organizations to implement authorization and authentication systems in a secure, flexible and easy way.
 
 <a href="https://plusauth.com/" target="_blank"><strong>Explore the PlusAuth Website »</strong></a>
 
